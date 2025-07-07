@@ -44,7 +44,7 @@ export default function Home() {
             quotes.map((q, i) => (
               <Card key={i}>
                 <CardContent className="p-4">
-                  <p className="text-lg italic">"{q.text}"</p>
+                  <p className="text-lg italic">{q.text}</p>
                   <p className="text-right mt-2 font-semibold">- {q.author}</p>
                 </CardContent>
               </Card>
