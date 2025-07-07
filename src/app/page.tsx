@@ -9,7 +9,7 @@ import { Card, CardContent } from "@/components/ui/card";
 const QUOTES = [
   { text: "Kill the boy, Jon Snow. Winter is almost upon us. Kill the boy and let the man be born.", author: "Maester Aemon", topics: ["growth", "winter", "transformation"] },
   { text: "Let me tell you something, boy. Never forget what you are — the rest of the world will not. Wear it like armor, and it can never be used to hurt you. The winters are hard, but the Starks endure. Winter is coming.", author: "Tyrion Lannister", topics: ["identity", "winter", "strength"] },
-  { text: "I don't care if he's a bastard. Ned Stark's blood runs through his veins. He's my king, from this day until his last day!", author: "Samwell Tarly", topics: ["loyalty", "leadership", "family"] },
+  { text: "I don&apos;t care if he&apos;s a bastard. Ned Stark&apos;s blood runs through his veins. He&apos;s my king, from this day until his last day!", author: "Samwell Tarly", topics: ["loyalty", "leadership", "family"] },
 ];
 
 export default function Home() {
@@ -44,7 +44,7 @@ export default function Home() {
             quotes.map((q, i) => (
               <Card key={i}>
                 <CardContent className="p-4">
-                  <p className="text-lg italic">{q.text}</p>
+                  <p className="text-lg italic" dangerouslySetInnerHTML={{ __html: q.text }} />
                   <p className="text-right mt-2 font-semibold">- {q.author}</p>
                 </CardContent>
               </Card>
